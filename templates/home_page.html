@@ -11,11 +11,16 @@
       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <title>Blog | Homepage</title>
   </head>
   <body>
-
     <div class="flex-container">
       <div class="item item_1">
         <h1 id="heading-logo">{{ heading }}</h1>
@@ -24,27 +29,37 @@
           <p>Business.</p>
           <p>Tips.</p>
         </div>
-        
+
         <div class="small-tagline">
-          <p>Welcome to my blog</p>
-          <p>By Latisha Johnson</p>
+          <p class="p1">Welcome to my blog</p>
+          <p class="p2">By Latisha Johnson</p>
+        </div>
+
+        <div id="footer">
+          <div class="footer_nav_links">
+            <ul class="bottom-nav">
+              <li>
+                <a href="#"><i class="fas fa-home fa-2x"></i></a>
+              </li>
+              <li><a href="#"><i class="fab fa-twitter fa-2x"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin fa-2x"></i></a></li>
+              <li><a href="#">Subscribe</a></li>
+            </ul>
+          </div>
         </div>
       </div>
 
       <div class="item item_2">
         <div class="item-container">
-              {% for item in articles %}
-              <div class="inner_item">
-                {{item.title}} --by {{item.author.name}}
-              </div>
-              {% endfor %}
+          {% for item in articles %}
+          <div class="inner_item">{{item.title}} --by {{item.author.name}}</div>
+          {% endfor %}
         </div>
       </div>
 
       <!-- <div class="item item_3">
         <h2>hello</h2>
       </div> -->
-
     </div>
   </body>
 </html>
