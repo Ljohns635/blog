@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Blog | Homepage</title>
+  </head>
+  <body>
+
+    <div class="flex-container">
+      <div class="item item_1">
+        <h1 id="heading-logo">{{ heading }}</h1>
+        <div class="tagline">
+          <p>Lifestyle.</p>
+          <p>Business.</p>
+          <p>Tips.</p>
+        </div>
+        
+        <div class="small-tagline">
+          <p>Welcome to my blog</p>
+          <p>By Latisha Johnson</p>
+        </div>
+      </div>
+
+      <div class="item item_2">
+        <div class="item-container">
+              {% for item in articles %}
+              <div class="inner_item">
+                {{item.title}} --by {{item.author.name}}
+              </div>
+              {% endfor %}
+        </div>
+      </div>
+
+      <!-- <div class="item item_3">
+        <h2>hello</h2>
+      </div> -->
+
+    </div>
+  </body>
+</html>
