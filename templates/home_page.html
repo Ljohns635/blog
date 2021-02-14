@@ -36,30 +36,40 @@
         </div>
 
         <div id="footer">
-          <div class="footer_nav_links">
             <ul class="bottom-nav">
               <li>
-                <a href="#"><i class="fas fa-home fa-2x"></i></a>
+                <a href="/"><i class="fas fa-home fa-2x"></i></a>
               </li>
-              <li><a href="#"><i class="fab fa-twitter fa-2x"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin fa-2x"></i></a></li>
-              <li><a href="#">Subscribe</a></li>
+              <li><a href="http://www.twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/latisha-johnson-088116202/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></li>
+              <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a></li>
             </ul>
-          </div>
         </div>
       </div>
 
       <div class="item item_2">
+        <div class="header">
+            <ul class="main-nav">
+              <li><a href="/categories">Categories</a></li>
+              <li><a href="/suggestions">Suggest</a></li>
+              <li><a href="/subscribe">Subscribe</a></li>
+              <li><a href="/about">About</a></li>
+            </ul>
+        </div>
         <div class="item-container">
           {% for item in articles %}
-          <div class="inner_item">{{item.title}} --by {{item.author.name}}</div>
+          <div class="inner_item">
+            <div class="article_image">
+              <img src="{{item.blog_image}}" width="100px" alt="{{item.title}}">
+            </div>
+            <h3><a href="article/{{item.id}}/">{{item.title}} <i class="fas fa-chevron-right fa-xs "></i></a></h3>
+            <p>{{item.description}}</p>
+            <span>{{item.post_date}}</span>
+            <span class="pill-box">{{item.category}}</span>
+          </div>
           {% endfor %}
         </div>
       </div>
-
-      <!-- <div class="item item_3">
-        <h2>hello</h2>
-      </div> -->
     </div>
   </body>
 </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <title>{{article.title}}</title>
+</head>
+
+<body>
+  <div class="flex-container">
+    <div class="item item_1">
+      <h1 id="heading-logo">{{ heading }}</h1>
+      <div class="tagline">
+        <p>Lifestyle.</p>
+        <p>Business.</p>
+        <p>Tips.</p>
+      </div>
+
+      <div class="small-tagline">
+        <p class="p1">Welcome to my blog</p>
+        <p class="p2">By Latisha Johnson</p>
+      </div>
+
+      <div id="footer">
+        <ul class="bottom-nav">
+          <a href="/"><i class="fas fa-home fa-2x"></i></a>
+          </li>
+          <li><a href="http://www.twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/latisha-johnson-088116202/" target="_blank"><i
+                class="fab fa-linkedin fa-2x"></i></a></li>
+          <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="item item_2">
+      <div class="header">
+        <ul class="main-nav">
+          <li><a href="/categories">Categories</a></li>
+          <li><a href="/suggestions">Suggest</a></li>
+          <li><a href="/subscribe">Subscribe</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </div>
+      <div class="item-container">
+        <div class="inner_item">
+          <h1>{{form}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
