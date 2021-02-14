@@ -53,7 +53,16 @@
             </div>
             <div class="item-container">
                 <div class="inner_item">
-                    <h1>{{form}}</h1>
+                    <h3>Anything your interested in?</h3>
+                    <p>Any topics you want to discuss or want advice about? This is a community that hears everyone's voice!</p>
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        {{form.as_p}}
+                        <input type="submit" value="Submit">
+                    </form>
+                    {% if message%}
+                    <p>{{ message }}</p>
+                    {% endif %}
                 </div>
             </div>
         </div>

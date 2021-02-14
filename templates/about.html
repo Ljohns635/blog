@@ -53,7 +53,10 @@
             </div>
             <div class="item-container">
                 <div class="inner_item">
-                    <h1>{{about}}</h1>
+                    <h3>About Me:</h3>
+                    {% for item in auth_info%}
+                    <p>{{item.about_me}}</p>
+                    {% endfor %}
                 </div>
             </div>
         </div>

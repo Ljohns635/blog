@@ -53,7 +53,16 @@
       </div>
       <div class="item-container">
         <div class="inner_item">
-          <h1>{{form}}</h1>
+          <h3>SubScribe to Recieve Content</h3>
+          <p>Want the lastes blog post in your inbox? Subscribe - it's free! Just type in your contact infor and you're on your way.</p>
+          <form action="" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Submit">
+          </form>
+          {% if message%}
+          <p>{{ message }}</p>
+          {% endif %}
         </div>
       </div>
     </div>
