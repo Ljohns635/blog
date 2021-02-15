@@ -198,3 +198,7 @@ input:hover {
     background-color: rgb(255, 237, 240);
 }
 
+.article_image{
+    float: left;
+    margin-right: 20px;
+}

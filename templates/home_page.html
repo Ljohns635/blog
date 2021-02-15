@@ -62,10 +62,12 @@
             <div class="article_image">
               <img src="{{item.blog_image}}" width="100px" alt="{{item.title}}">
             </div>
-            <h3><a href="article/{{item.id}}/">{{item.title}} <i class="fas fa-chevron-right fa-xs "></i></a></h3>
-            <p>{{item.description}}</p>
-            <span>{{item.post_date}}</span>
-            <span class="pill-box">{{item.category}}</span>
+            <div class="article_body">
+              <h3><a href="article/{{item.id}}/">{{item.title}} <i class="fas fa-chevron-right fa-xs "></i></a></h3>
+              <p>{{item.description}}</p>
+              <span>{{item.post_date}}</span>
+              <span class="pill-box">{{item.category}}</span>
+            </div>
           </div>
           {% endfor %}
         </div>
