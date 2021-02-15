@@ -183,4 +183,7 @@ body {
     padding: 2px;
 }
 
+.row1 > span {
+    width: 100px;
+}
 

@@ -8,6 +8,7 @@ authors = ["Latisha Johnson <latishaj966@gmail.com>"]
 python = "^3.7"
 Django = "^3.1.6"
 Pillow = "^8.1.0"
+crispy = "^0.7.3"
 
 [tool.poetry.dev-dependencies]
 
