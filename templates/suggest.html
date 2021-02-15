@@ -55,11 +55,14 @@
                 <div class="inner_item">
                     <h3>Anything your interested in?</h3>
                     <p>Any topics you want to discuss or want advice about? This is a community that hears everyone's voice!</p>
-                    <form action="" method="POST">
-                        {% csrf_token %}
-                        {{form.as_p}}
-                        <input type="submit" value="Submit">
-                    </form>
+                    <hr>
+                    <div class="form-container">
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            {{form.as_p}}
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
                     {% if message%}
                     <p>{{ message }}</p>
                     {% endif %}
