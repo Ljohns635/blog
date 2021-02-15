@@ -4,7 +4,7 @@ from blog_app.forms import SubscribePageForm, SuggestPageForm
 
 def homepage(request):
     articles = BlogItem.objects.all()
-    context = {'heading': 'Latisha Shanice', 'articles': articles}
+    context = {'heading': 'Latisha Shanice', 'articles': articles, 'title': 'Welcome to my blog'}
     return render(request, 'home_page.html', context)
 
 def article(request, post_id):
@@ -15,12 +15,12 @@ def article(request, post_id):
 def blogger(request, author_id):
     author_obj = Author.objects.get(id=author_id)
     articles = BlogItem.objects.filter(author=author_obj)
-    context = {'author': author_obj, 'articles': articles, 'heading': 'Latisha Shanice'}
+    context = {'author': author_obj, 'articles': articles, 'heading': 'Latisha Shanice', 'title': 'All blog post'}
     return render(request, 'author.html', context)
 
 def categories(request):
     categorys = BlogItem.objects.all()
-    context = {'list': 'This is the categories page', 'heading': 'Latisha Shanice', 'categorys': categorys}
+    context = {'list': 'This is the categories page', 'heading': 'Latisha Shanice', 'categorys': categorys, 'title': 'Categories'}
     return render(request, 'categories.html', context)
 
 def suggestions(request):
@@ -37,7 +37,7 @@ def suggestions(request):
             )
             context.update({'message':'Submitted successfully!'})
     form = SuggestPageForm()
-    context.update({'form': form, 'heading': 'Latisha Shanice'})
+    context.update({'form': form, 'heading': 'Latisha Shanice', 'title': 'Any Suggestions'})
     return render(request, 'suggest.html', context)
 
 def subscribe(request):
@@ -53,10 +53,10 @@ def subscribe(request):
             )
             context.update({'message':'Submitted successfully!'})
     form = SubscribePageForm()
-    context.update({'form': form, 'heading': 'Latisha Shanice'})
+    context.update({'form': form, 'heading': 'Latisha Shanice','title': 'Want to subscribe'})
     return render(request, 'subscribe.html', context)
 
 def about(request):
     auth_info = Author.objects.all()
-    context = {'auth_info': auth_info, 'heading': 'Latisha Shanice'}
+    context = {'auth_info': auth_info, 'heading': 'Latisha Shanice', 'title': 'About me'}
     return render(request, 'about.html', context)

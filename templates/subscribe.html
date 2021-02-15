@@ -26,7 +26,7 @@
       </div>
 
       <div class="small-tagline">
-        <p class="p1">Welcome to my blog</p>
+        <p class="p1">{{title}}</p>
         <p class="p2">By Latisha Johnson</p>
       </div>
 
@@ -60,7 +60,7 @@
           <form action="" method="POST">
             {% csrf_token %}
             {{ form|crispy }}
-            <input class="btn" type="submit" value="Submit">
+            <input type="submit" value="Submit">
           </form>
           {% if message%}
           <p>{{ message }}</p>

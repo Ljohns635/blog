@@ -183,7 +183,18 @@ body {
     padding: 2px;
 }
 
-.row1 > span {
-    width: 100px;
+input {
+    color: #ccc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 23px;
+    padding-right: 23px;
+    text-align: center;
+    background-color: black;
+    border: none;
+}
+
+input:hover {
+    background-color: rgb(255, 237, 240);
 }
 
